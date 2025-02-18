@@ -1,0 +1,64 @@
+/* frontend/src/components/TransactionChart.module.css */
+.chartContainer {
+    padding:1px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Style for the buttons */
+.buttonContainer button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.2s, color 0.2s; /* Smooth transition */
+}
+
+/* Active button style (when selected) */
+.buttonContainer button.active {
+    background-color: #3b82f6; /* bg-blue-500 */
+    color: white;
+}
+
+/* Inactive button style */
+.buttonContainer button:not(.active) {
+    background-color: #e5e7eb; /* bg-gray-200 */
+    color: #4b5563;          /* text-gray-700 */
+}
+
+/* Dark mode styles for inactive button */
+.dark .buttonContainer button:not(.active) {
+  background-color: #4b5563; /* Dark mode: bg-gray-700 */
+  color: #e5e7eb;            /* Dark mode: text-gray-200 */
+}
+.buttonContainer button:focus{
+    --tw-ring-offset-shadow: var(--tw-ring-inset, 0 0 0 0) 0 0 0 var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset, 0 0 0 0) 0 0 0 var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(96 165 250 / var(--tw-ring-opacity));
+}
+.dark .buttonContainer button:focus{
+      --tw-ring-color: rgb(96 165 250 / 0.5);
+}
+
+.loading {
+    text-align: center;
+}
+.dark .loading{
+    color: white;
+}
+
+.error {
+    text-align: center;
+    color: #ef4444; /* text-red-500 */
+}
+.dark .error{
+    color: #f87171
+}

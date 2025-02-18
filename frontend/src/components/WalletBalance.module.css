@@ -1,0 +1,15 @@
+/* frontend/src/components/WalletBalance.module.css */
+.loading{
+    text-align: center;
+}
+.dark .loading{
+    color: white;
+}
+.error{
+    text-align: center;
+    color: #ef4444;
+}
+
+.dark .error{
+    color: #f87171
+}
